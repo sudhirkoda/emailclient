@@ -371,7 +371,7 @@ def sendstatics():
 
 
 # noinspection PyBroadException
-@scheduler.scheduled_job('cron', id='cleandbdata', hour=14, minute=14)
+@scheduler.scheduled_job('cron', id='cleandbdata', hour=00, minute=5)
 def cleandbdata():
     module = "cleandbdata"
     logger.info(f" {module} :: Database cleanup started")
